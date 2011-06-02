@@ -9,6 +9,9 @@ set :user, "ec2-user"
 ssh_options[:keys] = [File.join(ENV["HOME"], "Downloads", "ec2tiny.pem")] 
 ssh_options[:forward_agent] = true
 
+set :bundle_flags,        "--deployment"
+set :bundle_cmd,          'ruby -S bundle'
+
 set :branch, "master"
 set :deploy_via, :remote_cache
 set :deploy_to, "/home/ec2-user/deploy/sites/#{application}"

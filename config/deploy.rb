@@ -1,15 +1,35 @@
-set :application, "set your application name here"
-set :repository,  "set your repository location here"
+set :application, "frabjous"
+set :domain, "frabjous.distributopia.com"
+set :location, "ec2-50-16-26-86.compute-1.amazonaws.com"
+set :scm, "git"
+set :repository, "git@github.com:cks/Frabjous.git"
+set :user, "ec2-user"
+ssh_options[:keys] = [File.join(ENV["HOME"], "Downloads", "ec2tiny.pem")] 
+ssh_options[:forward_agent] = true
 
-# If you aren't deploying to /u/apps/#{application} on the target
-# servers (which is the default), you can specify the actual location
-# via the :deploy_to variable:
-# set :deploy_to, "/var/www/#{application}"
+set :branch, "master"
+set :deploy_via, :remote_cache
+set :deploy_to, "/home/ec2-user/deploy/sites/#{application}"
+set :use_sudo, false
+role :web, location
+role :app, location
+role :db, location, :primary => true
 
-# If you aren't using Subversion to manage your source code, specify
-# your SCM below:
-# set :scm, :subversion
+namespace :deploy do
+  task :cold do
+    start
+  end
 
-role :app, "your app-server here"
-role :web, "your web-server here"
-role :db,  "your db-server here", :primary => true
+  task :stop do
+    run "/sbin/service frabjous stop"
+  end
+
+  task :start do
+    run "/sbin/service frabjous start"
+  end
+
+  task :restart do
+    stop
+    start
+  end
+end

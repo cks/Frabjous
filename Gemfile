@@ -25,6 +25,7 @@ gem 'rails', '3.0.7'
 gem 'jdbc-sqlite3'
 gem 'activerecord-jdbc-adapter'
 gem 'activerecord-jdbcsqlite3-adapter'
+gem 'glassfish'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

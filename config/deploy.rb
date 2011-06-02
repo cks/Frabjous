@@ -1,3 +1,5 @@
+require 'bundler/capistrano'
+
 set :application, "frabjous"
 set :domain, "frabjous.distributopia.com"
 set :location, "ec2-50-16-26-86.compute-1.amazonaws.com"

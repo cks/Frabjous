@@ -17,6 +17,6 @@ test:
 
 production:
   adapter: jdbcsqlite3
-  database: /Users/cks/dev/es/frabjous/db/production.sqlite3
+  database: /home/ec2-user/db/production.sqlite3
   pool: 5
   timeout: 5000

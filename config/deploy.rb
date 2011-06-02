@@ -9,10 +9,9 @@ set :user, "ec2-user"
 ssh_options[:keys] = [File.join(ENV["HOME"], "Downloads", "ec2tiny.pem")] 
 ssh_options[:forward_agent] = true
 
-set :git_shallow_clone,   1
-set :keep_releases,       3
-
-set :bundle_flags,        "--deployment"
+#set :git_shallow_clone,   1
+#set :keep_releases,       3
+#set :bundle_flags,        "--deployment"
 set :bundle_cmd,          'ruby -S bundle'
 
 set :branch, "master"

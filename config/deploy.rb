@@ -7,7 +7,7 @@ set :scm, "git"
 set :repository, "git@github.com:cks/Frabjous.git"
 set :user, "ec2-user"
 ssh_options[:keys] = [File.join(ENV["HOME"], "Downloads", "ec2tiny.pem")] 
-ssh_options[:forward_agent] = true
+#ssh_options[:forward_agent] = true
 
 #set :git_shallow_clone,   1
 #set :keep_releases,       3

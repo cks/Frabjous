@@ -33,6 +33,7 @@ GEM
       activesupport (= 3.0.7)
     activesupport (3.0.7)
     arel (2.0.10)
+    bouncy-castle-java (1.5.0146.1)
     builder (2.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -40,6 +41,8 @@ GEM
       rack (>= 0.4.0)
     i18n (0.5.0)
     jdbc-sqlite3 (3.6.14.2.056-java)
+    jruby-openssl (0.7.4)
+      bouncy-castle-java
     json (1.5.1-java)
     koala (1.0.0)
       json (~> 1.0)
@@ -85,6 +88,7 @@ DEPENDENCIES
   bundler
   glassfish
   jdbc-sqlite3
+  jruby-openssl
   koala
   rails (= 3.0.7)
   rake (= 0.8.7)

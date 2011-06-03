@@ -15,7 +15,7 @@ ssh_options[:forward_agent] = true
 #set :bundle_cmd,          '/usr/local/jruby/bin/jruby -S bundle'
 
 set :branch, "master"
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 set :deploy_to, "/home/ec2-user/deploy/sites/#{application}"
 set :use_sudo, false
 role :web, location

@@ -30,6 +30,7 @@ gem 'jdbc-sqlite3'
 gem 'activerecord-jdbc-adapter'
 gem 'activerecord-jdbcsqlite3-adapter'
 gem 'glassfish'
+gem 'jruby-openssl'
 
 gem 'koala'
 

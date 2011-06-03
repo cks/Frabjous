@@ -82,6 +82,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-jdbc-adapter
   activerecord-jdbcsqlite3-adapter
+  bundler
   glassfish
   jdbc-sqlite3
   koala

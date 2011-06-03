@@ -12,7 +12,7 @@ ssh_options[:forward_agent] = true
 #set :git_shallow_clone,   1
 #set :keep_releases,       3
 #set :bundle_flags,        "--deployment"
-set :bundle_cmd,          '/usr/local/jruby/bin/jruby -S bundle'
+#set :bundle_cmd,          '/usr/local/jruby/bin/jruby -S bundle'
 
 set :branch, "master"
 set :deploy_via, :remote_cache

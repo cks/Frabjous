@@ -12,7 +12,7 @@ ssh_options[:keys] = [File.join(ENV["HOME"], "Downloads", "ec2tiny.pem")]
 #set :git_shallow_clone,   1
 #set :keep_releases,       3
 #set :bundle_flags,        "--deployment"
-#set :bundle_cmd,          '/usr/local/jruby/bin/jruby -S bundle'
+set :bundle_cmd,          '/usr/local/jruby/bin/jruby -S bundle'
 
 set :branch, "master"
 #set :deploy_via, :remote_cache

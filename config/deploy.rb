@@ -19,7 +19,7 @@ role :web, location
 role :app, location
 role :db, location, :primary => true
 
-require 'bundler/capistrano'
+#require 'bundler/capistrano'
 
 namespace :deploy do
   task :cold do

@@ -1,5 +1,3 @@
-require 'bundler/capistrano'
-
 set :application, "frabjous"
 set :domain, "frabjous.distributopia.com"
 set :location, "ec2-50-16-26-86.compute-1.amazonaws.com"
@@ -12,7 +10,6 @@ ssh_options[:keys] = [File.join(ENV["HOME"], "Downloads", "ec2tiny.pem")]
 #set :git_shallow_clone,   1
 #set :keep_releases,       3
 set :bundle_flags,        "--deployment"
-set :bundle_cmd,          '/usr/local/jruby/bin/jruby -S bundle'
 
 set :branch, "master"
 #set :deploy_via, :remote_cache
@@ -21,6 +18,8 @@ set :use_sudo, false
 role :web, location
 role :app, location
 role :db, location, :primary => true
+
+require 'bundler/capistrano'
 
 namespace :deploy do
   task :cold do
